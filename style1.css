@@ -1,0 +1,188 @@
+/*
+Theme Name: HTML5
+*/
+body {
+    background-color: #eaedef;
+    background-image: url();
+    color: #000305;
+    font-size: 87.5%;
+    font-family: Arial, 'Lucida Sans Unicode';
+    line-height: 1.5;
+    text-align: left;
+}
+
+a {text-decoration: none;}
+a:link, a:visited {color: #2980b9;}
+a:hover, a:active {color: #f58233;}
+
+.body{
+    margin: 10px auto;
+    width: 70%;
+    clear: both;
+}
+
+/*----------- MAIN HEADER ------------*/
+.mainheader img{
+    width: 200px;
+}
+.mainheader nav {
+    background-color: #e74c3c;
+
+    height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.mainheader nav ul{
+    text-align: center;
+    list-style: none;   
+    margin: 0 auto ;
+    padding: 0;
+}
+.mainheader nav ul li{
+    display: inline;
+
+}
+.mainheader a:link, .mainheader a:visited{
+    color: white;
+    padding: 10px 105px;
+    display: inline-block;
+    height: 20px;
+}
+.mainheader a:hover, .mainheader a:active{
+    color: white;
+    background-color: #dc44e2;
+    text-shadow: none;
+}
+
+/* ------------------MAIN CONTENT----------------------*/
+
+.mainContent{
+    width: 70%;
+    float: left;
+}
+
+.top-content{
+    background-color: #fff;
+    padding:3%;
+    margin-top: 3%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.post-info{
+    font-size:90%;
+    color: #999;
+    font-style:italic;
+    margin-top:-20px;
+}
+.post-content{
+    display:block; 
+}
+.theSideBar{
+    width: 24%;
+    margin: 2% 0 0 2%;
+    float:left;
+    padding:2%;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+/* ------------------FOOTER----------------------*/
+
+.footer {
+    margin-top: 20px;
+    float: left;
+    width:70%;
+    background-color: #e74c3c;
+    height: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.footer p{
+    text-align: center;
+    color: #fff;
+    padding: 0%;
+}
+
+
+/*-----------------HTML5--------------------*/
+.post-image{
+    width: 100%;
+    height: 50%;
+}
+
+
+figure{
+    margin: 25px 3%;
+    font-size: 90%;
+    color:#999;
+}
+
+/*--------------------- CSS3 FOR MOBILE-----------------------*/
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 90%;
+        font-size: 95%;
+    }
+
+    /*----------------------MAIN HEADER Mobile---------------------*/
+    .mainheader nav {
+        font-size: 95%;
+        height: 145px;
+    }
+    .mainheader ul {
+        width: 100%;
+        padding: 0;
+    }
+
+    .mainheader nav ul li {
+        display: inline;
+        width: 100%; /* Inline-block for better control */
+    }
+
+    .mainheader a:link,
+    .mainheader a:visited {
+        display: block;
+    }
+
+    .mainheader a:hover,
+    .mainheader a:active {
+        color: white;
+        background-color: #dc44e2;
+        text-shadow: none;
+    }
+
+    /* ------------------MAIN CONTENT----------------------*/
+
+    .mainContent{
+        width: 100%;
+    }
+    .theSideBar{
+        width: 95%;
+        float:left;
+        padding:2%;
+        background-color: white;
+    }
+video{
+    width: 100%;
+    }    
+}
+
+@media screen and (max-width: 680px) {
+    body {
+        width: 90%;
+        font-size: 95%;
+    }
+
+    /*----------------------MAIN HEADER Mobile---------------------*/
+    .mainheader nav {
+        font-size: 80%;
+        height: 145px;
+    }
+}

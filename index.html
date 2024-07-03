@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JavaScript</title>
+</head>
+<body>
+    <h1 id="ayoub">hello ayoub</h1>
+    <h1 id="nour">hello nour</h1>
+    <div class="fname">Ayoub</div>
+    <div class="fname">Nour</div>
+    <div class="lname">Marie</div>
+    <div class="lname">Sara</div>
+    <br>
+    <br>
+    <div class="Red">Josef</div>
+    <div class="Red">Nour</div>
+    <div class="Blue">Marie</div>
+    <div class="Blue">Jastine</div>
+    <div class="Green">Celian</div>
+    <div class="Green">Pierre</div>
+
+    <!--dans html on ne peut pas mettre deux éléments par le même id mais on peut faire deux éléments par la même classe-->
+
+    <br>
+    <br>
+    <form>
+        <Select id="element">
+            <option value="">Select a type of colors</option>
+            <option value="red">Reds</option>
+            <option value="blue">Blues</option>
+            <option value="green">Greens</option>
+        </Select>
+    </form>
+    <br>
+    <br>
+    <div id="output"></div> <!-- Ajouté pour afficher les résultats des fonctions -->
+
+    <script>
+
+        document.querySelector("#ayoub").style.color = "red";
+        const nour = document.querySelector("#nour");
+        nour.style.color = "blue";
+
+        setTimeout(() => {
+            nour.innerHTML = "Hello Majed";
+        }, 2000);
+
+        setTimeout(() => {
+            const name0 = document.querySelector("#ayoub");
+            name0.innerHTML = 11 + 2; // Ajouté ici car 'ayoub' n'était pas défini
+        }, 2000);
+
+        let x = 11 + 2;
+        //console.log(x)
+        //alert(x)
+        //document.write(x)
+
+        // variables: const, let, var, ''
+        //const: constant
+        //let: variable
+        //var: variable
+        // '' : string
+        // `` : template string
+        
+        const name0 = "Sara";
+        console.log(name0);
+
+        let name1 = "Celian";
+        console.log(name1);
+        // dans tous les cas il faut juste s'assurer d'utiliser let ou const et pour var et '' sont déconseillé à l'utiliser 
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function changeColor() {
+                setTimeout(() => {
+                    const name2 = document.querySelector("#nour"); // Correction ici
+                    name2.style.color = "green";
+                }, 2000);
+            }
+            changeColor(); // Appel sans argument car nour est déjà défini
+            
+            function addTextWithBreak(text) {
+                let output = document.getElementById("output");
+                output.innerHTML += text + "<br>";
+            }
+
+            function calc(number) {
+                let n = number * 2;
+                console.log(n);
+                addTextWithBreak(n); // Correction pour afficher le résultat du calcul
+            }
+            calc(5 + 2); // 7 comme argument
+
+            function sum(number1, number2) {
+                let sum = number1 + number2;
+                console.log(sum);
+                addTextWithBreak(sum); // Correction pour afficher le résultat de la somme
+            }
+            sum(12, 45); // 12 et 45 comme arguments
+        });
+        //Arrays
+        const numbers = [2, 7, 4, 2, 1]
+        console.log(numbers)
+        console.log(numbers.length)
+        
+        function changeColor(el, color){
+            const set = document.querySelectorAll("."+ el)
+            //name[2].style.color= "red"
+
+            for(let i = 0; i < set.length; i++){
+                if (set[i].innerHTML == "Sara"){
+                    set[i].style.color = 'orange'
+                }else if(set[i].innerHTML == "Ayoub") {
+                        set[i].style.color ='yellow'
+                    }else{
+                        set[i].style.color = color
+                    }
+                }
+            }
+        changeColor("fname", "red")
+        changeColor("lname", "blue")
+        changeColor("Red", "red")
+        changeColor("Blue", "blue")
+        changeColor("Green", "green")
+
+        const element = document.querySelector("#element")
+        element.addEventListener('change', function(){
+            console.log(element.value)
+        })
+
+        const names_array = Array.from(name)
+        console.log("node list", name)
+        console.log('array', names_array)
+        
+        //json file by objects
+        const users =
+        {
+            'user1':{
+                "Key": "value",
+                "name": "ayoub",
+                "age": 22,
+                "isStudent": true,
+            },
+            'user2':{
+                "name": "sara",
+                "age": 20,
+                "isStudent": true,
+                
+            }
+        }
+        console.log(users)
+        console.log(users.user1.name)
+
+    </script>
+
+    <script src="./test.js"></script>
+</body>
+</html>
